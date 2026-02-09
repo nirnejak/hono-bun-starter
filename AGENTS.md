@@ -22,10 +22,12 @@ Essential information for AI coding agents working in this repository.
 
 ### Code Quality
 
-- `bun run lint` - Run ESLint on src/
-- `bun run lint:fix` - Auto-fix ESLint issues
-- `bun run format` - Format with Prettier
-- `bun run format:check` - Check Prettier formatting
+- `bun run lint` - Run Biome linter on src/
+- `bun run lint:fix` - Auto-fix Biome lint issues
+- `bun run format` - Format with Biome
+- `bun run format:check` - Check Biome formatting
+- `bun run check` - Run Biome lint + format + import sorting
+- `bun run check:fix` - Auto-fix all Biome issues
 
 ### Database
 
@@ -77,20 +79,15 @@ import { getUsers } from "@/controllers/user"
 - **Database**: snake_case (Drizzle convention)
 - **Constants**: UPPER_SNAKE_CASE
 
-### Formatting (Prettier)
+### Formatting & Linting (Biome)
 
 - No semicolons
 - Double quotes
 - 2-space indentation
-- ES5 trailing commas
-- Auto end-of-line
-
-### ESLint
-
-- Flat config with typescript-eslint
-- Uses eslint-config-love, security, promise, node plugins
-- Prettier integration
-- Disabled strict rules: `no-magic-numbers`, `eqeqeq`, `no-console`
+- Trailing commas (all)
+- LF line endings
+- Recommended lint rules with `noDoubleEquals`, `noExplicitAny`, `noNonNullAssertion` disabled
+- Import organizing enabled
 
 ## Patterns
 
@@ -184,7 +181,7 @@ Copy `.env.example` to `.env` and fill in values.
 ## Git Hooks
 
 - **Husky**: Pre-commit hooks configured
-- **lint-staged**: Runs ESLint on staged `*.{js,ts}` files
+- **lint-staged**: Runs `biome check` on staged `*.{js,ts}` files
 
 ## CI/CD
 
@@ -198,7 +195,7 @@ GitHub Actions workflow (`.github/workflows/node.js.yml`):
 1. `bun install`
 2. `cp .env.example .env` and configure
 3. `bun run dev`
-4. Before committing: `bun run lint:fix && bun run format`
+4. Before committing: `bun run check:fix`
 
 ## Security Best Practices
 

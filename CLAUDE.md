@@ -10,10 +10,12 @@ bun run build        # Compile to dist/ via Bun bundler
 bun start            # Run production build from dist/
 bun run type-check   # TypeScript type checking only
 
-bun run lint         # ESLint on src/
+bun run lint         # Biome lint on src/
 bun run lint:fix     # Auto-fix lint issues
-bun run format       # Prettier formatting
+bun run format       # Biome formatting
 bun run format:check # Check formatting
+bun run check        # Biome lint + format + import sorting
+bun run check:fix    # Auto-fix all Biome issues
 
 bun run db:push      # Push schema changes to database
 bun run db:generate  # Generate Drizzle migrations
@@ -39,11 +41,11 @@ Hono web framework running on Bun with Drizzle ORM (Neon PostgreSQL) and Better 
 
 ## Code Style
 
-- **No semicolons**, double quotes, 2-space indent (Prettier)
+- **No semicolons**, double quotes, 2-space indent (Biome)
 - Path alias: `@/*` maps to `src/*`
-- ESLint flat config with `eslint-config-love`, security, promise, and node plugins
-- `no-magic-numbers`, `eqeqeq`, and `no-console` are intentionally disabled
-- Pre-commit hook (Husky + lint-staged) runs ESLint on staged `*.{js,ts}` files
+- Biome handles linting, formatting, and import sorting via `biome.json`
+- `noDoubleEquals`, `noExplicitAny`, and `noNonNullAssertion` are intentionally disabled
+- Pre-commit hook (Husky + lint-staged) runs `biome check` on staged `*.{js,ts}` files
 
 ## Patterns
 

@@ -15,7 +15,7 @@
     "erasableSyntaxOnly": true,
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "./eslint.config.js"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
   "ts-node": {
     "esm": true

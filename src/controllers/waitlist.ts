@@ -1,5 +1,5 @@
-import { waitlist } from "@/db/schema"
 import { db } from "@/db"
+import { waitlist } from "@/db/schema"
 
 export async function allWaitlists() {
   try {

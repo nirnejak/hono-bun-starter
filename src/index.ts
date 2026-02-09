@@ -19,7 +19,7 @@ app.get("/", (c) => {
 app.on(
   ["POST", "GET"],
   "/api/auth/*",
-  async (c) => await auth.handler(c.req.raw)
+  async (c) => await auth.handler(c.req.raw),
 )
 app.route("/stream/", streamRoute)
 app.route("/api/user/", userRoutes)
@@ -27,7 +27,6 @@ app.route("/api/waitlist/", waitlistRoutes)
 
 export default app
 
-// eslint-disable-next-line "@typescript-eslint/no-explicit-any"
 process.on("unhandledRejection", (reason: string, p: Promise<any>) => {
   console.log(p)
   throw new Error(reason)
@@ -35,6 +34,5 @@ process.on("unhandledRejection", (reason: string, p: Promise<any>) => {
 
 process.on("uncaughtException", (error: Error) => {
   console.error(error)
-  // eslint-disable-next-line n/no-process-exit
   process.exit(1)
 })

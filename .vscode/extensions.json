@@ -1,9 +1,7 @@
 {
   "recommendations": [
     "editorconfig.editorconfig",
-    "ms-azuretools.vscode-docker",
-    "graphql.vscode-graphql",
-    "streetsidesoftware.code-spell-checker",
-    "biomejs.biome"
+    "biomejs.biome",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

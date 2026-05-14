@@ -5,6 +5,9 @@
 {
   "tab_size": 2,
   "format_on_save": "on",
-	"formatter": { "language_server": { "name": "biome" } },
-	"code_actions_on_format": { "source.fixAll.biome": true }
+  "prettier": { "allowed": false },
+  "formatter": [
+    { "language_server": { "name": "oxfmt" } },
+    { "code_action": "source.fixAll.oxc" }
+  ]
 }

@@ -27,8 +27,8 @@
 
 - `bun run dev` - Start development server
 - `bun run build` - Build for production
-- `bun run lint` - Run linter with Biome
-- `bun run format` - Format with Biome
-- `bun run check` - Run Biome lint + format + import sorting
+- `bun run lint` - Run linter with oxlint
+- `bun run format` - Format with oxfmt
+- `bun run check` - Run oxlint + oxfmt --check
 - `bun run db:generate` - Generate migrations
 - `bun run db:migrate` - Run migrations

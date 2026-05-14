@@ -8,12 +8,12 @@
     "dev": "bun --hot src/index.ts",
     "build": "bun build src/index.ts --outdir dist",
     "start": "bun dist/index.js",
-    "lint": "biome lint ./src",
-    "lint:fix": "biome lint --write ./src",
-    "format": "biome format --write ./src",
-    "format:check": "biome format ./src",
-    "check": "biome check ./src",
-    "check:fix": "biome check --write ./src",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt ./src",
+    "format:check": "oxfmt --check ./src",
+    "check": "oxlint && oxfmt --check ./src",
+    "check:fix": "oxlint --fix && oxfmt ./src",
     "type-check": "tsc --pretty --noEmit",
     "prepare": "husky",
     "db:generate": "drizzle-kit generate",
@@ -48,15 +48,16 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.15",
     "@types/bun": "^1.3.14",
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.4",
+    "oxfmt": "^0.49.0",
+    "oxlint": "^1.64.0",
     "typescript": "^6.0.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "biome check --no-errors-on-unmatched"
+    "*.{js,jsx,ts,tsx}": ["oxlint --fix", "oxfmt"]
   },
   "volta": {
     "node": "24.12.0"

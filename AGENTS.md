@@ -22,12 +22,12 @@ Essential information for AI coding agents working in this repository.
 
 ### Code Quality
 
-- `bun run lint` - Run Biome linter on src/
-- `bun run lint:fix` - Auto-fix Biome lint issues
-- `bun run format` - Format with Biome
-- `bun run format:check` - Check Biome formatting
-- `bun run check` - Run Biome lint + format + import sorting
-- `bun run check:fix` - Auto-fix all Biome issues
+- `bun run lint` - Run oxlint on src/
+- `bun run lint:fix` - Auto-fix oxlint issues
+- `bun run format` - Format with oxfmt
+- `bun run format:check` - Check oxfmt formatting
+- `bun run check` - Run oxlint + oxfmt --check
+- `bun run check:fix` - Auto-fix lint, then format
 
 ### Database
 
@@ -79,15 +79,15 @@ import { getUsers } from "@/controllers/user"
 - **Database**: snake_case (Drizzle convention)
 - **Constants**: UPPER_SNAKE_CASE
 
-### Formatting & Linting (Biome)
+### Formatting & Linting (OXC)
 
 - No semicolons
 - Double quotes
 - 2-space indentation
 - Trailing commas (all)
 - LF line endings
-- Recommended lint rules with `noDoubleEquals`, `noExplicitAny`, `noNonNullAssertion` disabled
-- Import organizing enabled
+- oxlint `correctness` category enabled; `eslint/eqeqeq`, `typescript/no-explicit-any`, `typescript/no-non-null-assertion` disabled
+- oxfmt handles formatting (Prettier-compatible)
 
 ## Patterns
 
@@ -181,7 +181,7 @@ Copy `.env.example` to `.env` and fill in values.
 ## Git Hooks
 
 - **Husky**: Pre-commit hooks configured
-- **lint-staged**: Runs `biome check` on staged `*.{js,ts}` files
+- **lint-staged**: Runs `oxlint --fix` + `oxfmt` on staged `*.{js,ts}` files
 
 ## CI/CD
 

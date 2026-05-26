@@ -41,10 +41,10 @@
     "@hono/zod-validator": "^0.8.0",
     "@neondatabase/serverless": "^1.1.0",
     "better-auth": "^1.6.11",
-    "date-fns": "^4.2.1",
+    "date-fns": "^4.3.0",
     "drizzle-orm": "^0.45.2",
     "drizzle-zod": "^0.8.3",
-    "hono": "^4.12.21",
+    "hono": "^4.12.23",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -52,8 +52,8 @@
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.5",
-    "oxfmt": "^0.51.0",
-    "oxlint": "^1.66.0",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0",
     "typescript": "^6.0.3"
   },
   "lint-staged": {

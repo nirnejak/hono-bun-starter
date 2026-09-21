@@ -39,12 +39,12 @@
   "homepage": "https://github.com/nirnejak/hono-bun-starter#readme",
   "dependencies": {
     "@hono/zod-validator": "^0.9.1",
-    "@neondatabase/serverless": "^1.1.0",
-    "better-auth": "^1.7.6",
+    "@neondatabase/serverless": "^1.2.0",
+    "better-auth": "^1.7.7",
     "date-fns": "^4.4.0",
     "drizzle-orm": "^0.45.3",
     "drizzle-zod": "^0.8.3",
-    "hono": "^4.13.11",
+    "hono": "^4.13.13",
     "zod": "^4.6.5"
   },
   "devDependencies": {
@@ -52,8 +52,8 @@
     "drizzle-kit": "^0.31.11",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
-    "oxfmt": "^0.71.0",
-    "oxlint": "^1.86.0",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
     "typescript": "^7.0.2"
   },
   "lint-staged": {

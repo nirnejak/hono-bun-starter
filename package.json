@@ -40,11 +40,11 @@
   "dependencies": {
     "@hono/zod-validator": "^0.9.1",
     "@neondatabase/serverless": "^1.2.0",
-    "better-auth": "^1.7.14",
+    "better-auth": "^1.7.15",
     "date-fns": "^4.4.0",
     "drizzle-orm": "^0.45.4",
     "drizzle-zod": "^0.8.3",
-    "hono": "^4.13.14",
+    "hono": "^4.13.16",
     "zod": "^4.6.7"
   },
   "devDependencies": {
